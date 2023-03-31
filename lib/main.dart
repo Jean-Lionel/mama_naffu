@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: HeaderApp(),
         ),
-        body: const Center(
+        body: Center(
           child: SingleChildScrollView(
             child: CreateAccount(),
           ),

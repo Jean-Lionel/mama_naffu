@@ -14,18 +14,17 @@ class _CreateAccountState extends State<CreateAccount> {
     return Padding(
       padding: const EdgeInsets.all(10.0),
       child: Column(
-        children: const [
-          Text(
+        children: [
+          const Text(
             "Create an Account",
             style: TextStyle(
               fontSize: 30,
             ),
           ),
-          FieldInput(),
-          FieldInput(),
-          FieldInput(),
-          FieldInput(),
-          FieldInput(),
+          FieldInput("First Name", "ex: Jean Lionel"),
+          FieldInput("Last Name", "eg : Nininahazwe"),
+          FieldInput("Phone Number", "eg : +257 79 614 036"),
+          
         ],
       ),
     );

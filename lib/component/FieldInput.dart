@@ -3,7 +3,9 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter/material.dart';
 
 class FieldInput extends StatefulWidget {
-  const FieldInput({super.key});
+  final String _label;
+  final String _placeholder;
+  FieldInput(this._label, this._placeholder);
   @override
   State<FieldInput> createState() => _FieldInputState();
 }
@@ -11,11 +13,14 @@ class FieldInput extends StatefulWidget {
 class _FieldInputState extends State<FieldInput> {
   @override
   Widget build(BuildContext context) {
-    return const TextField(
-      decoration: InputDecoration(
-        border: OutlineInputBorder(),
-        labelText: 'First Name',
-        hintText: 'First Name',
+    return Padding(
+      padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
+      child: TextField(
+        decoration: InputDecoration(
+          border: OutlineInputBorder(),
+          labelText: widget._label,
+          hintText: widget._placeholder,
+        ),
       ),
     );
   }
