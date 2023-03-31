@@ -30,8 +30,8 @@ class _CreateAccountState extends State<CreateAccount> {
           FieldInput("Confirm password", "eg : *******"),
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              const ButtonComponent(),
+            children: const [
+              ButtonComponent(),
             ],
           )
         ],

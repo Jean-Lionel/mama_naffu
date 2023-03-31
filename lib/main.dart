@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './component/header.dart';
 import './component/register_user.dart';
+import './pages/login_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,9 +17,9 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: HeaderApp(),
         ),
-        body: Center(
+        body: const Center(
           child: SingleChildScrollView(
-            child: CreateAccount(),
+            child: Login(),
           ),
         ),
       ),

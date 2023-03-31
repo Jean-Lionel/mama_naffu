@@ -14,7 +14,7 @@ class _FieldInputState extends State<FieldInput> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
+      padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
       child: TextField(
         decoration: InputDecoration(
           border: OutlineInputBorder(),
