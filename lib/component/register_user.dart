@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-
 import './FieldInput.dart';
+import './buttonComponent.dart';
+
 
 class CreateAccount extends StatefulWidget {
   const CreateAccount({super.key});
@@ -27,20 +28,12 @@ class _CreateAccountState extends State<CreateAccount> {
           FieldInput("Email Adress", "eg : nijeanlionel@gmail.com"),
           FieldInput("Password", "eg : *******"),
           FieldInput("Confirm password", "eg : *******"),
-          ElevatedButton(
-              child:
-                  Text("Buy now".toUpperCase(), style: TextStyle(fontSize: 14)),
-              style: ButtonStyle(
-                  foregroundColor:
-                      MaterialStateProperty.all<Color>(Colors.white),
-                  backgroundColor: MaterialStateProperty.all<Color>(Colors.red),
-                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                      RoundedRectangleBorder(
-                          borderRadius: BorderRadius.zero,
-                          side: BorderSide(color: Colors.red)))),
-              onPressed: () => null)
-        
-          
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              const ButtonComponent(),
+            ],
+          )
         ],
       ),
     );
