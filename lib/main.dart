@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import './component/header.dart';
+import './component/register_user.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,18 +14,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              CircleAvatar(
-                backgroundColor: Colors.brown.shade800,
-                child: const Text('MN'),
-              ),
-              const SizedBox(
-                width: 20,
-              ),
-              const Text('Mama Nafuu'),
-            ],
+          title: HeaderApp(),
+        ),
+        body: const Center(
+          child: SingleChildScrollView(
+            child: CreateAccount(),
           ),
         ),
       ),
